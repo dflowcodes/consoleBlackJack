@@ -39,6 +39,7 @@ int Player::calculate_hand_value() {
         for (auto it : this->hand) {
             if (it->get_rank() == Rank::Ace) {
                 it->set_rank(Rank::One);
+                count -= 10;
             }
         }
     }

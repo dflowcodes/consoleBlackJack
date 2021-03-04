@@ -17,6 +17,7 @@ top_card(0)
         this->deck.push_back(new Card(static_cast<Suit>(i), Rank::Jack));
         this->deck.push_back(new Card(static_cast<Suit>(i), Rank::Queen));
         this->deck.push_back(new Card(static_cast<Suit>(i), Rank::King));
+        this->deck.push_back(new Card(static_cast<Suit>(i), Rank::Ace));
 
     }
 }
