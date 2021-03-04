@@ -22,6 +22,7 @@ public:
     bool is_facedown();
     int get_numerical_value();
     void set_facedown();
+    void flip_faceup();
     void set_rank(Rank rank);
     std::string get_card_description();
     

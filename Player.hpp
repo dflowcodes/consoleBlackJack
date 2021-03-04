@@ -12,7 +12,6 @@
 #include <iostream>
 #include <vector>
 #include "Card.hpp"
-#include "State.h"
 
 class Player{
     
@@ -23,14 +22,14 @@ public:
     void add_to_score(int change);
     void add_to_hand(Card *card);
     void print_hand();
-    State get_state();
-    void set_state(State state);
+    void erase_hand();
+    
 protected:
     Player(int score_in);
-private:
     std::vector<Card *> hand;
+private:
     int score;
-    State state;
+    
 };
 
 #endif /* Player_hpp */

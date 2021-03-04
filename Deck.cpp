@@ -32,6 +32,7 @@ void Deck::shuffle() {
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(this->deck.begin(), this->deck.end(), g);
+    this->top_card = 0;
 }
 
 Card* Deck::deal_card(bool hidden) {

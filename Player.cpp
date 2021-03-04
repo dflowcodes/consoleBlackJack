@@ -11,7 +11,7 @@ Player::Player():
 hand{}, score{0} {}
 
 Player::Player(int score_in):
-hand{}, score{score_in}, state(State::Playing) {}
+hand{}, score{score_in} {}
 
 void Player::add_to_hand(Card *card) {
     this->hand.push_back(card);
@@ -59,11 +59,7 @@ void Player::print_hand() {
     }
 }
 
-State Player::get_state() {
-    return this->state;
-}
-
-void Player::set_state(State state) {
-    this->state = state;
+void Player::erase_hand() {
+    this->hand.clear();
 }
 

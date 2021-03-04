@@ -26,6 +26,10 @@ bool Card::is_facedown() {
     return this->facedown;
 }
 
+void Card::flip_faceup() {
+    this->facedown = false;
+}
+
 int Card::get_numerical_value() {
     if (this->rank == Rank::Jack || this->rank == Rank::Queen || this->rank == Rank::King) {
         return 10;
@@ -65,10 +69,14 @@ std::string Card::get_card_description() {
             break;
         case Suit::Diamonds:
             description += " Diamonds";
+            break;
         case Suit::Clubs:
             description += " Clubs";
+            break;
         default:
             break;
     }
     return description;
 }
+
+//TODO: Need to implement going alone, and potentially insurance (although that seems unnecesarry).
